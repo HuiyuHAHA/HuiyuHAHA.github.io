@@ -1,0 +1,83 @@
+/* Main headline of this page */
+h1{
+    color: teal;
+    font-size: 32px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(186, 220, 209);
+}
+
+
+h2{
+    color: teal;
+    text-align: center;
+}
+
+/* Prompt questions text style. */
+h3{
+    width: 1300px;
+    color: darkslategray;
+    background-color: rgb(186, 220, 209);
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Style of link */
+#link{
+    margin: 0 auto;
+}
+a:link{
+    color: blueviolet;
+}
+a:visited{
+    color:rgb(30, 127, 95);
+}
+a:hover{
+    font-size: 20px;
+    color: blue;
+}
+a:active{
+    color: red;
+}
+
+/* Question 2 answer text style. */
+ol li{
+    width: 450px;
+    color: darkolivegreen;
+    margin: 0 auto;
+}
+
+/* Most answers text style. */
+p{
+    width: 1000px;
+    color: darkolivegreen;
+    font-size: 18px;
+    line-height: 2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* This box border is for 1 or 2 line short answers */
+.prompts1{
+    width: 1300px;
+    height:100px;
+    border: 3px solid rgb(131, 159, 150);
+    margin: 0 auto;
+}
+
+/* This box border is for 3-line answers */
+.prompts2{
+    width: 1300px;
+    height:150px;
+    border: 3px solid rgb(131, 159, 150);
+    margin: 0 auto;
+}
+
+/* This box border is for 4-line answers */
+.prompts3{
+    width: 1300px;
+    height:180px;
+    border: 3px solid rgb(131, 159, 150);
+    margin: 0 auto;
+}
