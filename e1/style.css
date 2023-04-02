@@ -1,0 +1,108 @@
+/* w5 */
+
+/* I want to make a doomsday theme page of “the whole world get into chaos as the sun declines”.
+ So black is chosen as the background color to express an atmosphere of depression and despair. */
+:root{
+  background-color: rgb(0, 0, 0);
+}
+
+
+/* Fix the size of the div or the boxes will collapse. */
+html,body,div{
+  height: 100%;
+}
+
+
+/* Define the basic generic properties of the boxes to avoid code duplication resulting in inefficient code reading.
+I chose dotted as the default border style because it has no eye-catching design elements, it accentuates the background of 
+the box and the jaggedness of its square edges gives the viewer a space-age pixelated retro vibe, in keeping with the theme of 
+'the crumbling sun'.
+For the default background I chose the simplest linear-gradient, which transitions from red to black.*/
+.box{
+  width: 100%;
+  height:100%;
+  box-sizing: border-box;
+  border-style: dotted; 
+  background: linear-gradient(rgb(229, 0, 0), rgb(169, 14, 0), rgb(78, 4, 0), rgb(0, 0, 0));
+}
+
+
+/* This is the grid format I copied from the layout it website, I used image to describe the box to avoid semantic confusion. */
+.container {  
+    display: grid;
+    grid-template-columns: 4.05fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 4.05fr;
+    grid-template-rows: 0.1fr 1fr 0.9fr 1fr 0.1fr 3.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . . . . . . ."
+      ". image1 . . . image3 . . . image5 ."
+      ". image1 . image2 . image3 . image4 . image5 ."
+      ". . . image2 . . . image4 . . ."
+      ". . . . . . . . . . ."
+      ". Image6 Image6 Image6 Image6 Image6 Image6 Image6 Image6 Image6 .";
+  }
+
+
+  /* This is the box that occupies the largest area, and I set it as one of the visual focal points. 
+  I used a repeating-linear-gradient slash code and a red, black and white colour scheme to create a strong contrast,
+  and the background pattern resembles both a faulty display and a louvre-covered vent, giving the viewer a sense of 
+  disarray and loss of control. The bezel is a grey 4mm ridge to simulate a metallic display frame. The light red 1.5rem 
+  box shadow and the dark red and almost black outline surround the box like a display shimmer, emphasising the box's presence 
+  and drawing the viewer's attention. */
+  .Image6 { 
+    outline: 0.5rem solid rgb(63, 0, 0);
+    box-shadow: 0 0 0 1.5rem rgba(255, 24, 24, 0.703);
+    border-radius: 4px;
+    margin: 1.5rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+    grid-area: Image6;
+    background: repeating-linear-gradient(
+    -45deg,
+    rgb(255, 255, 255),
+    red 5px,
+    red 5px,
+    rgb(0, 0, 0) 30px
+    );
+    border: 4mm ridge rgb(145, 145, 145);
+}
+  
+  
+/* In the top three boxes I have used radial gradients with red and black backgrounds to represent the past, present and future forms of the sun.
+In the first box, the sun is running as usual, so I give a length as size for the circle-which presents the sun, 
+so that its size and shape will not change no matter how large or small the page is.
+In box 3, the sun becomes abnormal and unstable, so I position each radial colour stop with a percentage, so that the sun is no longer square and
+ is squeezed as the page shrinks, to describe its state.
+In box 5 I wanted to show the sun collapsing completely, so I used the farthest-corner for ellipses to place the circle in the corner.
+ */
+  .image1 { 
+    grid-area: image1;
+    background: radial-gradient(circle 50px, rgb(126, 0, 4) 20%, black 50%, red);
+}
+  
+  .image3 { 
+    grid-area: image3; 
+    background: radial-gradient(rgb(0, 0, 0) 10%, rgb(255, 0, 0) 30%, rgb(126, 0, 4) 50% );
+}
+  
+  .image5 { 
+    grid-area: image5;
+    background:radial-gradient(ellipse farthest-corner at 90% 90%,
+    red 5%,
+    rgb(0, 0, 0) 20%,
+    rgb(126, 0, 4) 50%,
+    rgb(95, 0, 0));
+}
+
+
+/* As a transitional area to fill in the gaps, I have not added any eye-catching elements to these two boxes, thus allowing the viewer to better 
+focus on the other areas. */
+  .image2 { 
+    grid-area: image2;
+}
+  
+  .image4 { 
+    grid-area: image4; 
+}
+  
