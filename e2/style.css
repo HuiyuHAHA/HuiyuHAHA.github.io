@@ -1,0 +1,90 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#ffffff;
+  --col-02:#000000;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --border: 1px solid var(--col-02);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+}
+
+div{
+  margin-bottom: 10px;
+}
+
+/* "content" includes both "title" and "recipe box" class.*/
+/* Give margin-left a value so all the information would not be cover by filter section. */
+/* text aligned in center so both The visual focus of both images and text will be placed in the middle of the page, 
+giving the user inertia and making it easier to read information  */
+.content{
+  display: block;
+  margin-left: 240px;
+  text-align: center;
+}
+
+.title{
+font-size: larger;
+background-color: #b6e878;
+}
+
+/* I used a striking orange colour for the border of each recipe as it is similar to the colour of most foods and fits the theme of the recipe site */
+.RecipeBox{
+  width: 1300px;
+  flex-direction: column;
+  border:4mm solid orange;
+  border-radius: 30px;
+}
+
+/* Define Filter Section as fixed so that user is able to reset it anytime instead of scrolling to the top of the page. */
+/* Also the background color is close to orange, match with the theme of food*/
+.FilterSection{
+    position:fixed;
+    width: 220px;
+    min-height: 100vh;
+    background-color: #e6c07f;
+
+}
+
+.SelectedFilter{
+  color: red;
+}
+
+/* I set the style of recipe names as bold and large, 
+so users notice them before all the other text information, 
+therefore they know what ingrediants they should prepare.  */
+.RecipeName{
+font-weight: bold;
+font-size: large;
+}
+
+/*Blue text color is used for reminding user some of other important information that are not included in filter section,
+ such as time to cook and serving size they may interest in */
+/*I choose red as "Special Equipment"s text color because its more neccessary to pay attention to than above two attributes. */
+.TimeToCook{
+color: rgb(17, 173, 185);
+}
+
+.Servings{
+  color: rgb(17, 173, 185);
+}
+
+.SpecialEquipment{
+color: red;
+}
+
