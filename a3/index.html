@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" name="viewport" http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>High-rise Fire Safety(Information Design)</title>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+         <!-- Modal -->
+         <dialog id="modalDialog">
+
+          <button id="closeModal">Close</button>
+            <p>Design Decisions and Citing Sources</p>
+           
+            <p>The pairing I&rsquo;ve chosen for my project is “stretched” and “information design” and the theme of my website is
+               to showcase high-rise fire education which is sourced from Fire Safety Victoria. To achieve the goal, my design
+                focuses on vertical-direction stretched animation of both text and picture contents while the visitor is 
+                scrolling through the page. In addition, I also include parallax scrollings and sliding out description overlays
+                 to match the overall style.
+            </p>
+            
+            <p>Part One:Heading Section&lpar;Html&#43CSS&#43JavaScript&rpar;<br />
+              Because the heading part will make the first impression on visitors, I organized both textual and visual elements to create an urgent feeling due to the warning role of this website.<br />
+              For the visual part, video of embers' atmosphere is embedded as background, it works together with horizontal scrolling smoke pictures to simulate a fire circumstance. However, the main visual body—images of buildings scroll downwards when hovering indicate visitors to explore this page by moving up and down.<br />
+              For the textual part, the two lines of headline text also glide horizontally, in line with visitors' horizontal reading habits and giving them a hint as to the extent of the next reading area, making for a silky smooth interactive experience. The glowing text loading animation appeals to similarity of alert light on fire trucks, related to visitors&rsquo;custom knowledge.
+            </p>
+          
+            <p>Part Two:Expand and OverScroll Animation while Scrolling&lpar;Html&#43CSS&#43JavaScript&rpar;<br />
+                This function consists of two parts—using intersection observer to run a conditional check to find out if that entry is intersecting the viewport or not, and an expanding animation when the entry enters. Therefore visitors can concentrate on a specific present information module and do not worry about interference from other information. Cubic-bezier is used to make sections smooth and look more real.
+            </p>
+            
+            <p>Part Three:Show Text when Hover&lpar;Html&#43CSS&rpar;<br />
+              This was the most challenging part for me during the whole project, because it required processing dense content—visitors are supposed to see details of the pictures and the six images are a coherent whole, so they must take a big area of the viewport; Nevertheless, the text explanation part is also necessary. Hence, overlay is considered to apply. People intend to move their cursor to the content they focus on so I set the height of the overlay as 100 percent while hovering the image but zero percent as the cursor leaves so a simple upwards animation is created. By setting parent div container&rsquo;s position as &ldquo;relative&rdquo; and overlay&rsquo;s position as &ldquo;absolute&rdquo; to make sure that each description is placed at the same area as its corresponding image.
+            </p>
+            <br></br>
+            
+              <p>Citing Soources:</p>
+              <p>
+              <div class="citing">
+              <a id="link1" href="https://footagecrate.com/search/#!/embers+atmosphere" target="_blank">Embers Video</a>
+              <a id="link2" href="https://graphics.productioncrate.com/stock-image-hd/GraphicsCrate-Distant_Smoke_Plume_1" target="_blank">Smoke Picture</a>
+              <a id="link3" href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=433081" target="_blank">Buildings Picture</a>
+              <a id="link4" href="https://youtu.be/zNfDY6H2zfc" target="_blank">Cool Css Glowing Text Loading Animation Tutorial - Html Css Blinking Text Effect</a>
+              <a id="link5" href="https://youtu.be/T33NN_pPeNI" target="_blank">Subtle, yet Beautiful Scroll Animations</a>
+            </p>
+            </div>
+        </dialog>
+  
+        <button id="showModal">500-word discussion</button>
+
+<!-- Heading Cover Section -->
+    <section> 
+        <div class="wrapper">
+        <div class="video-container">
+            <video src="./images/footagecrate-emberscreenatmospherenight-matte.mp4" autoplay muted loop></video>
+        </div>
+
+        <img src="./images/building1.png" alt="building1" class="building building1">
+        <img src="./images/building2.png" alt="building2" class="building building2">
+        <img src="./images/GraphicsCrate-Distant_Smoke_Plume_1-3536x1748.png" alt="smoke" class="smoke smoke_1">
+        <img src="./images/GraphicsCrate-Distant_Smoke_Plume_3-3536x1748.png" alt="smoke" class="smoke smoke_2">
+    </div>
+    
+        <ul id="fire">
+            <li>F</li>
+            <li>I</li>
+            <li>R</li>
+            <li>E</li>
+        </ul>
+    <h1 id="high_rise">High-rise</h1>
+    </section>
+   
+
+    <section class="hidden"> 
+        <h2>HIGH RISE BUILDING FIRE SAFETY</h2>
+        <p>People living in high rise buildings need to think ahead and be prepared in the event of a 
+          fire. 
+          <br></br>
+          If you live in a high-rise building, It is important to know the fire safety features in your 
+          building, to know what to do, and how to safely evacuate in the event of a fire.</p>
+    </section>
+
+
+    <section class="hidden"> 
+        <h2>Be Prepared</h2>
+        <ol>
+          <li>Familiarise yourself with your building&rsquo;s evacuation plan; it will show you the way out 
+            and where to assemble safely</li>
+          <li>Learn and practice your building&rsquo;s evacuation plan with those who live with you</li>
+          <li>Learn to recognise the sound of your building&rsquo;s fire alarm and understand how the 
+            building&rsquo;s fire safety systems work</li>
+          <li>Replace your smoke alarm every 10 years. FRV recommends photoelectric smoke 
+            alarms with a 10-year lithium battery</li>
+          <li>Test your smoke alarm monthly by pressing the test button and gently dust around 
+              the cover of your smoke alarm yearly</li>
+      </ol>
+    </section>
+
+    <section class="hidden"> 
+      <h2>What to do in case of a fire</h2>
+      <ol>
+        <li>When alerted to a fire by the building&rsquo;s fire alarm, respond immediately and alert 
+          other people you live with</li>
+        <li>If smoke is present, get down low and stay out of the smoke as you exit the building</li>
+        <li>If it is safe, close doors behind you to slow the spread of fire and smoke</li>
+        <li>Alert other people on your way out</li>
+        <li>Do not use lifts. Follow the Exit signs and use fire isolated stairs. Close the fire doors 
+          behind you to keep smoke and heat out of the stairwell</li>
+        <li>Alert other people on your way out</li>
+        <li>Do not use lifts. Follow the Exit signs and use fire isolated stairs. Close the fire doors 
+          behind you to keep smoke and heat out of the stairwell</li>
+        <li>As per your building&rsquo;s evacuation plan, once you are outside, go to the assembly 
+          area</li>
+        <li>Once you are safely at your assembly area, call 000 (triple zero) and ask for FIRE</li>
+        <li>Do not re-enter the building until the all clear is given by the fire services</li>
+        <li>If you are unable to safely escape, stay inside your apartment and seal the doors to stop
+          smoke from getting inside. Call 000 (triple zero) and ask for evacuation assistance</li>
+    </ol>
+  </section>
+
+  <section class="img_steps hidden"> 
+    <h2>FIRE SAFETY ON BALCONIES</h2>
+    <p>Hover on image to check detailed explanation.</p>
+  
+  
+  <div class="images">
+    <div class="mid">
+      <img src="./images/step_1.png" class="image">
+      <div class="overlay" >
+        1.Always store gas bottles outside, upright and away from sources of heat.
+      </div>
+    </div>
+    <div class="mid">
+      <img src="./images/step_2.png">
+      <div class="overlay">
+        2.When using a barbeque 
+        maintain a safe distance of 
+        50 cm from exterior walls, 
+        anything else that could 
+        burn, as well as any 
+        electrical ignition sources.
+      </div>
+    </div>
+    <div class="mid">
+      <img src="./images/step_3.png">
+      <div class="overlay">
+        3.Smokers should use heavy, 
+        high-sided ashtrays (made 
+        of glass, ceramic or metal) 
+        to prevent them tipping over. 
+        Always fully extinguish 
+        cigarettes.
+      </div>
+    </div>
+    <div class="mid">
+      <img src="./images/step_4.png">
+      <div class="overlay">
+        4.Remove rubbish, clutter 
+        and flammable items from 
+        balconies and keep furniture 
+        away from exterior walls.
+      </div>
+    </div>
+    <div class="mid">
+      <img src="./images/step_5.png">
+      <div class="overlay">
+        5.Keep goods, materials and
+        clothes a safe distance of 1 
+        metre clear of air conditioner 
+        units.
+      </div>
+    </div>
+    <div class="mid">
+      <img src="./images/step_6.png">
+      <div class="overlay">
+        6.Keep a dry powder fire 
+        extinguisher easily 
+        accessible. Use only in 
+        case of a small fire and if 
+        you feel physically and 
+        mentally able.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hidden"> 
+  <h2>THANK YOU FOR WATCHING!</h2>
+  <p id="ref">This website is sourced from:</p>
+  <a id="ref_pdf" href="High Rise Fire Safety_ENGLISH.pdf">High Rise Fire Safetty.pdf</a>
+  <h3>For further information on fire safety, visit</h3>
+  <a href="https://www.frv.vic.gov.au/">www.frv.vic.gov.au</a>
+</section>
+
+  </body>
